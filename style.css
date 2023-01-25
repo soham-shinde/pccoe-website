@@ -407,7 +407,7 @@ body {
     z-index: 1;
     transform: translateY(50%) rotate(-10deg);
     margin: 5rem;
-    animation: floating2 5s ease-in-out infinite;
+    animation: floating2 7s ease-in-out infinite;
 }
 
 @keyframes floating2 {
