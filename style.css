@@ -1,17 +1,32 @@
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     background-color: #050E1D;
     color: #fff;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    min-width:1000px;        
+   width: auto !important;  
+   width:1000px;     
 }
 
 .nav {
     display: flex;
+    position: relative;
     flex-direction: row;
     justify-content: end;
     align-items: center;
     height: 6rem;
+    top: 1rem;
 }
 
 .nav ul {
@@ -74,7 +89,7 @@ body {
 }
 
 .header-quote {
-    margin: 5rem auto;
+    margin: 10rem auto;
     left: 20rem;
     max-width: 700px;
     position: relative;
@@ -85,7 +100,7 @@ body {
 
     font-size: 2rem;
     font-weight: lighter;
-    color: rgb(130, 130, 130);
+    color: rgb(255, 255, 255);
     margin-left: 5rem;
     margin-top: 10px;
 
@@ -114,18 +129,8 @@ body {
     display: block;
 }
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
 .timeline-section {
-    margin-top: 20rem !important;
+    margin-top: 15rem !important;
     width: 701px;
     margin: 0 0 0 auto;
 }
@@ -137,7 +142,7 @@ body {
     margin: 0 auto;
     text-align: center;
     font-size: 2rem;
-    color: hwb(287 49% 3%);
+    color: hwb(0 100% 0%);
 }
 
 .timeline ul {
@@ -294,7 +299,7 @@ body {
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1496px) {
 
     .content {
         left: -289px;
@@ -302,7 +307,7 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
 
     .content {
         left: 45px;
@@ -313,57 +318,11 @@ body {
         border-width: 8px 16px 8px 0;
         border-color: transparent transparent transparent;
     }
-    #background-video {
-    width: 600%;
-    height: 600vh;
-    left: calc(-100%);
-    top: 70%;
-}
-}
+    
 
 
-/* EXTRA/CLIP PATH STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.timeline-clippy ul li::after {
-    width: 40px;
-    height: 40px;
-    border-radius: 0;
 }
 
-.timeline-rhombus ul li::after {
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-.timeline-rhombus ul li div::before {
-    bottom: 12px;
-}
-
-.timeline-star ul li::after {
-    clip-path: polygon(50% 0%,
-            61% 35%,
-            98% 35%,
-            68% 57%,
-            79% 91%,
-            50% 70%,
-            21% 91%,
-            32% 57%,
-            2% 35%,
-            39% 35%);
-}
-
-.timeline-heptagon ul li::after {
-    clip-path: polygon(50% 0%,
-            90% 20%,
-            100% 60%,
-            75% 100%,
-            25% 100%,
-            0% 60%,
-            10% 20%);
-}
-
-.timeline-infinite ul li::after {
-    animation: scaleAnimation 2s infinite;
-}
 
 @keyframes scaleAnimation {
     0% {
@@ -413,20 +372,20 @@ body {
     z-index: 1;
     transform: translateY(50%) rotate(-10deg);
     margin: 5rem;
-    animation: floating2 7s ease-in-out infinite;
+    animation: floating2 5s ease-in-out infinite;
 }
 
 @keyframes floating2 {
     0% {
-        transform: translate(0 ,150%) rotate(-10deg);
+        transform: translate(0 ,0%) rotate(-10deg);
     }
 
     50% {
-        transform: translate(0, 0) rotate(-10deg);
+        transform: translate(0, 50%) rotate(-10deg);
     }
 
     100% {
-        transform: translate(0, 150%) rotate(-10deg);
+        transform: translate(0, 0%) rotate(-10deg);
     }
 }
 
@@ -454,7 +413,7 @@ body {
     max-width: 17rem;
     background-color: rgba(255, 255, 255, 0.11);
     border-radius: 10px;
-    padding: 0.5rem;
+    padding: 3rem 0.5rem;
     padding-bottom: 20px;
     font-size: 0.6rem;
     font-weight: 100;
@@ -501,7 +460,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top:5rem;
 }
 
 .luncher-section {
@@ -517,14 +476,14 @@ body {
     position: relative;
     width:3px;
     margin: 0 auto;
-    background: linear-gradient(to top, rgba(255, 0, 0, 0), hwb(126 49% 3%));
+    background: linear-gradient(to top, rgba(255, 0, 0, 0), #603bb3,rgba(255, 0, 0, 0));
 }
 .luncher-timeline ul li:nth-child(even) {
     list-style-type: none;
     position: relative;
     width:3px;
     margin: 0 auto;
-    background: linear-gradient(to bottom, rgba(255, 0, 0, 0), #ffa28b);
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0), hwb(126 49% 3%),rgba(255, 0, 0, 0));
 }
 
 .luncher-timeline ul li::after {
@@ -577,22 +536,20 @@ body {
     border-color: transparent transparent transparent;
 }
 
-
-
-/* EFFECTS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .luncher-timeline ul li::after {
     transition: background 0.5s ease-in-out;
+    TOP: 50%;
+
 }
 
 .luncher-timeline ul li.in-view::after {
-    background: hwb(126 49% 3%);
-    box-shadow: 1px 1px 50px 1rem hwb(126 49% 3%);
+    background: #603bb3 ;
+    box-shadow: 1px 1px 50px 1rem #603bb3;
+
 }
 .luncher-timeline ul li:nth-child(even).in-view::after {
-    background: #ffa28b;
-    box-shadow: 1px 1px 50px 1rem #ffa28b;
+    background: hwb(126 49% 3%);
+    box-shadow: 1px 1px 50px 1rem hwb(126 49% 3%);
 }
 
 .rocket-card{
@@ -649,18 +606,16 @@ body {
     position: absolute;
     right: 10%;
     z-index: 1;
-    transform: translateY(50%) rotate(54deg);
-    margin: 5rem;
-
-    animation: floating1 5s ease-in-out infinite;
-
-
+    transform: translateY(50%) rotate(27deg);
+    margin: none;
+    animation: floating1 5s ease-in-out  normal forwards;
+    width: 10rem;
 }
 
 .rocket img {
     left: 0;
-    width: 20rem;
-    filter: drop-shadow(2px 2px 100px rgb(90, 75, 188));
+    width: 10rem;
+    filter: drop-shadow(2px 2px 100px rgb(34, 0, 255));
 }
 .astrocat-img{
     background-image: url("images/astrocat-min.png");
@@ -668,29 +623,59 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
-    background-position-y: 2rem;
-    width: 100vw;
-    height: 100vh;
+    background-position-y: 0rem;
+    width: 100%;
+    height: 101vh;
     position: absolute;
-    bottom: 0;
+    top: calc(100% - 100vh);
+    right: -20px;
     z-index: -1;
 }
 @keyframes floating1 {
     0% {
-        transform: translate(50%,-50%) rotate(30deg);
+        transform: translate(-100%,100%) rotate(30deg);
     }
-
-    25% {
-        transform: translate(0, 20px) rotate(30deg);
-    }
-    50% {
-        transform: translate(20,-200px) rotate(30deg);
-    }
-    75%{
-        transform: translate(0,20px) rotate(30deg);
-
-    }
+ 
     100% {
         transform: translate(50%,-50%) rotate(30deg);
+    }
+}
+
+@media screen and (max-width: 400px){
+    .astrocat-img{
+        height: 45rem;
+        top: calc(100% - 45rem);
+        left: 70%;
+    }
+    .mission-section{
+        width: 1500vw;
+    }
+    .content{
+        left: -600px;
+    }
+    #background-video {
+        width: 80rem;
+        height: 80rem;
+        left: calc(-30rem);
+        top: 70%;
+    }
+    .nav ul{
+        right: -38rem;
+    }
+    .header{
+        top:5rem;
+    }
+    .header-quote{
+        margin-right: 19rem;
+        top: 5rem;
+    }
+    .rocket{
+        right: -30rem;
+    }
+    .statelite{
+        transform: translate(0,50rem);
+    }
+    .header-quote p {
+    margin-top: 4rem;
     }
 }
