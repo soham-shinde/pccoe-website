@@ -137,7 +137,7 @@ body {
 .timeline-container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin:0 auto 0 4rem;
     text-align: center;
     font-size: 2rem;
     color: hwb(0 100% 0%);
